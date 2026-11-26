@@ -64,14 +64,14 @@
 克隆或下载解压本仓库后，双击运行 **`install.bat`**，或在 PowerShell 中执行：
 
 ```powershell
-git clone https://github.com/<your-username>/antigravity-quota-monitor.git
+git clone https://github.com/leaomiguel894-create/antigravity-quota-monitor.git
 cd antigravity-quota-monitor
 .\install.ps1
 ```
 
 ### macOS / Linux
 ```bash
-git clone https://github.com/<your-username>/antigravity-quota-monitor.git
+git clone https://github.com/leaomiguel894-create/antigravity-quota-monitor.git
 cd antigravity-quota-monitor
 chmod +x install.sh && ./install.sh
 ```

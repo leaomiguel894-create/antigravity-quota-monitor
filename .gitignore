@@ -1,0 +1,13 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Runtime & local state
+server/data/
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

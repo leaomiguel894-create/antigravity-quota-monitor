@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "quota-monitor": {
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/server/mcp_server.py",
+        "--data-dir=${PLUGIN_DATA}"
+      ]
+    }
+  }
+}

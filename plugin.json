@@ -1,0 +1,12 @@
+{
+  "name": "quota-monitor",
+  "displayName": "额度监控",
+  "version": "2.2.0",
+  "description": "Apple 毛玻璃质感的 Antigravity 右侧栏监控插件：实时展示模型额度池、配速节奏、当前会话上下文占用、缓存命中率与输出速度 (tok/s)。",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "打开额度监控面板查看当前剩余额度",
+    "看看现在 Gemini 和 Claude 还剩多少额度以及多久重置",
+    "在侧边栏打开 Antigravity 额度监控"
+  ]
+}

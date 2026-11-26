@@ -48,10 +48,16 @@
 
 ## 🤖 一键让 AI 帮你安装（最推荐）
 
-直接把下面这段话复制发给你的 **Antigravity 对话框**，AI 会自动完成环境检测、安装与热加载（无需重启客户端）：
+直接点击代码块右上角复制，粘贴发给你的 **Antigravity 对话框**，无论本机是否安装 Git，AI 都会自动完成下载、环境配置与免重启热加载：
 
 ```text
-请克隆或读取本仓库中的 AGENTS.md，帮我安装这个 Antigravity 额度监控插件并刷新 MCP 服务。
+请帮我安装项目 https://github.com/leaomiguel894-create/antigravity-quota-monitor
+
+按以下步骤执行：
+1. 检查本机 Python 3.9+ 环境（零第三方依赖，无需 pip install）。
+2. 若本机有 Git 则克隆仓库到临时目录；若无 Git 则直接下载 https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip 并解压。
+3. 读取仓库内的 AGENTS.md，运行 install.ps1（Windows）或 install.sh（macOS/Linux）将插件部署到 ~/.gemini/config/plugins/quota-monitor，并调用 RefreshMcpServers 热刷新服务。
+4. 不要关闭或重启客户端；安装验证完成后告诉我如何在右侧栏打开「额度监控」。
 ```
 
 ---

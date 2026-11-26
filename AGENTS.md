@@ -2,9 +2,13 @@
 
 当用户要求你安装或更新本仓库（`quota-monitor` — Antigravity 额度与会话监控插件）时，请按以下步骤执行：
 
-## 1. 环境预检（零外部依赖）
+## 1. 获取源码与环境预检（零外部依赖，支持无 Git 环境）
 
 本插件服务端仅使用 **Python 3.9+ 标准库**，无需 `pip install` 任何第三方包，也无需 Node.js。
+
+- **获取仓库源码**（若当前不在仓库目录内）：
+  - 若本机已安装 `git`：`git clone https://github.com/leaomiguel894-create/antigravity-quota-monitor.git` 到临时目录。
+  - 若本机未安装 `git`：直接下载源码压缩包 `https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip`（或最新 Release 中的 `antigravity-quota-monitor-v2.2.0.zip`）并解压到临时目录。
 
 先检测本机可用的 Python 3 可执行文件绝对路径：
 - **Windows (PowerShell)**：`(Get-Command python -ErrorAction SilentlyContinue).Source`（若无则尝试 `py -3 -c "import sys; print(sys.executable)"`）

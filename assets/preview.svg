@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0E17"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0E1525"/>
+    </linearGradient>
+    <radialGradient id="orbBlue" cx="0.8" cy="0.2" r="0.45">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbGreen" cx="0.2" cy="0.75" r="0.45">
+      <stop offset="0%" stop-color="#30D158" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#30D158" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#64D2FF"/>
+    </linearGradient>
+    <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34C759"/>
+      <stop offset="100%" stop-color="#30D158"/>
+    </linearGradient>
+    <linearGradient id="barTeal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#30B0C7"/>
+      <stop offset="100%" stop-color="#64D2FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background & Ambient Orbs -->
+  <rect width="880" height="420" rx="24" fill="url(#bgGrad)"/>
+  <rect width="880" height="420" rx="24" fill="url(#orbBlue)"/>
+  <rect width="880" height="420" rx="24" fill="url(#orbGreen)"/>
+
+  <!-- Left Marketing Pitch -->
+  <g transform="translate(48, 66)">
+    <rect x="0" y="0" width="166" height="26" rx="13" fill="rgba(10,132,255,0.18)" stroke="rgba(100,210,255,0.3)" stroke-width="1"/>
+    <text x="83" y="17" text-anchor="middle" fill="#64D2FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="11.5" font-weight="600">Apple Liquid Glass UI</text>
+
+    <text x="0" y="68" fill="#F5F5F7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="32" font-weight="700" letter-spacing="-0.5">Antigravity 额度监控</text>
+    <text x="0" y="102" fill="rgba(245,245,247,0.68)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="15.5">右侧栏原生可视化 · 双窗口配额 · 上下文与输出测速</text>
+
+    <g transform="translate(0, 136)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="13.5" fill="rgba(245,245,247,0.86)">
+      <circle cx="8" cy="-4" r="4" fill="#30D158"/>
+      <text x="22" y="0">同步官方 View Usage：5h 冲刺限额 + Weekly 周限额双同心环</text>
+
+      <circle cx="8" cy="28" r="4" fill="#0A84FF"/>
+      <text x="22" y="32">当前会话上下文精确统计：缓存命中率、增量输入与预算切换</text>
+
+      <circle cx="8" cy="60" r="4" fill="#64D2FF"/>
+      <text x="22" y="64">实时生成测速 (tok/s)：自动剔除空闲等待，绘制单步脉冲图</text>
+
+      <circle cx="8" cy="92" r="4" fill="#5E5CE6"/>
+      <text x="22" y="96">100% 官方 MCP Apps 扩展：零依赖、免改 app.asar、升级不掉</text>
+    </g>
+
+    <g transform="translate(0, 266)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11.5" font-weight="600">
+      <rect x="0" y="0" width="110" height="28" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="55" y="18" text-anchor="middle" fill="#F5F5F7">Python 3.9+</text>
+
+      <rect x="120" y="0" width="128" height="28" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="184" y="18" text-anchor="middle" fill="#F5F5F7">Zero Dependencies</text>
+
+      <rect x="258" y="0" width="136" height="28" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="326" y="18" text-anchor="middle" fill="#F5F5F7">Win · macOS · Linux</text>
+    </g>
+  </g>
+
+  <!-- Right Glass Widget Mockup -->
+  <g transform="translate(508, 28)">
+    <rect x="0" y="0" width="332" height="364" rx="22" fill="url(#cardGlass)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+    <!-- Top Header -->
+    <rect x="16" y="16" width="26" height="26" rx="7" fill="url(#iconGrad)"/>
+    <path d="M29 31 L33 27 M22 34 A 8 8 0 1 1 36 34" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="50" y="34" fill="#F5F5F7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="650">额度与会话</text>
+    <rect x="124" y="21" width="66" height="17" rx="8.5" fill="rgba(10,132,255,0.22)"/>
+    <text x="157" y="33" text-anchor="middle" fill="#64D2FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9.5" font-weight="600">AI Pro</text>
+
+    <rect x="258" y="17" width="58" height="24" rx="12" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.14)"/>
+    <circle cx="271" cy="29" r="3.2" fill="#30D158"/>
+    <text x="292" y="33" text-anchor="middle" fill="#F5F5F7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="600">15s</text>
+
+    <!-- 3 Capsules -->
+    <g transform="translate(16, 54)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+      <rect x="0" y="0" width="96" height="38" rx="11" fill="rgba(255,255,255,0.07)" stroke="#0A84FF" stroke-width="1"/>
+      <text x="12" y="15" fill="rgba(245,245,247,0.5)" font-size="8.5">Gemini 池</text>
+      <text x="12" y="30" fill="#30D158" font-size="11" font-weight="700">84% · 周90%</text>
+
+      <rect x="102" y="0" width="96" height="38" rx="11" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)"/>
+      <text x="114" y="15" fill="rgba(245,245,247,0.5)" font-size="8.5">当前上下文</text>
+      <text x="114" y="30" fill="#F5F5F7" font-size="11" font-weight="700">186.4K</text>
+
+      <rect x="204" y="0" width="96" height="38" rx="11" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)"/>
+      <text x="216" y="15" fill="rgba(245,245,247,0.5)" font-size="8.5">输出速度</text>
+      <text x="216" y="30" fill="#0A84FF" font-size="11" font-weight="700">92.4 t/s</text>
+    </g>
+
+    <!-- Dual Concentric Ring Hero -->
+    <g transform="translate(16, 104)">
+      <rect x="0" y="0" width="300" height="114" rx="15" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+      <g transform="translate(56, 57)">
+        <circle cx="0" cy="0" r="40" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="7"/>
+        <circle cx="0" cy="0" r="40" fill="none" stroke="#30D158" stroke-width="7" stroke-linecap="round" transform="rotate(-90)" stroke-dasharray="211 252"/>
+        <circle cx="0" cy="0" r="29" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="6"/>
+        <circle cx="0" cy="0" r="29" fill="none" stroke="#64D2FF" stroke-width="6" stroke-linecap="round" transform="rotate(-90)" stroke-dasharray="164 182"/>
+        <text x="0" y="4" text-anchor="middle" fill="#30D158" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="750">84%</text>
+        <text x="0" y="17" text-anchor="middle" fill="rgba(245,245,247,0.6)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="8.5">周 90%</text>
+      </g>
+      <g transform="translate(114, 16)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+        <text x="0" y="12" fill="#F5F5F7" font-size="12" font-weight="650">Gemini 模型组</text>
+        <rect x="122" y="0" width="52" height="16" rx="8" fill="rgba(48,209,88,0.18)"/>
+        <text x="148" y="11" text-anchor="middle" fill="#30D158" font-size="9" font-weight="600">余量充裕</text>
+
+        <rect x="0" y="24" width="84" height="34" rx="8" fill="rgba(255,255,255,0.05)"/>
+        <text x="8" y="37" fill="rgba(245,245,247,0.5)" font-size="8.5">5h 限额</text>
+        <text x="8" y="51" fill="#30D158" font-size="11" font-weight="700">84% (84.3%)</text>
+
+        <rect x="90" y="24" width="84" height="34" rx="8" fill="rgba(255,255,255,0.05)"/>
+        <text x="98" y="37" fill="rgba(245,245,247,0.5)" font-size="8.5">每周限额</text>
+        <text x="98" y="51" fill="#64D2FF" font-size="11" font-weight="700">90% (89.6%)</text>
+
+        <rect x="0" y="63" width="84" height="24" rx="7" fill="rgba(255,255,255,0.05)"/>
+        <text x="8" y="78" fill="rgba(245,245,247,0.78)" font-size="9.5">5h 重置 4h 41m</text>
+
+        <rect x="90" y="63" width="84" height="24" rx="7" fill="rgba(255,255,255,0.05)"/>
+        <text x="98" y="78" fill="rgba(245,245,247,0.78)" font-size="9.5">周重置 6d 18h</text>
+      </g>
+    </g>
+
+    <!-- Dual Window Bars -->
+    <g transform="translate(16, 230)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+      <rect x="0" y="0" width="300" height="116" rx="15" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+      <text x="14" y="22" fill="#F5F5F7" font-size="11.5" font-weight="650">Claude &amp; GPT 模型组</text>
+      <text x="286" y="22" text-anchor="end" fill="#0A84FF" font-size="10">7 个模型 ▼</text>
+
+      <text x="14" y="45" fill="rgba(245,245,247,0.75)" font-size="10">5 小时限额 (5h)</text>
+      <text x="286" y="45" text-anchor="end" fill="#30D158" font-size="11" font-weight="700">100% left</text>
+      <rect x="14" y="51" width="272" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+      <rect x="14" y="51" width="272" height="6" rx="3" fill="url(#barGreen)"/>
+
+      <text x="14" y="80" fill="rgba(245,245,247,0.75)" font-size="10">每周限额 (Weekly)</text>
+      <text x="286" y="80" text-anchor="end" fill="#64D2FF" font-size="11" font-weight="700">71% left</text>
+      <rect x="14" y="86" width="272" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+      <rect x="14" y="86" width="193" height="6" rx="3" fill="url(#barTeal)"/>
+      <text x="14" y="105" fill="rgba(245,245,247,0.48)" font-size="9.5">与官方 View Usage 双窗口实时同步</text>
+    </g>
+  </g>
+</svg>

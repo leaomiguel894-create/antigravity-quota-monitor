@@ -6,10 +6,10 @@
 
 **Apple 毛玻璃质感的 Google Antigravity 右侧栏额度、会话上下文与输出速度监控插件**
 
-[![Version](https://img.shields.io/badge/version-2.2.0-007AFF?style=flat-square)](#)
-[![MCP Apps](https://img.shields.io/badge/MCP_Apps-SEP--1865-34C759?style=flat-square)](#)
-[![Python](https://img.shields.io/badge/Python-3.9%2B_Stdlib-30B0C7?style=flat-square)](#)
-[![Zero Patch](https://img.shields.io/badge/app.asar-免改包·零风险-5856D6?style=flat-square)](#)
+[![Release](https://img.shields.io/badge/release-v2.2.0-007AFF?style=flat-square)](https://github.com/leaomiguel894-create/antigravity-quota-monitor/releases/latest)
+[![MCP Apps](https://img.shields.io/badge/MCP_Apps-SEP--1865-34C759?style=flat-square)](https://github.com/modelcontextprotocol/ext-apps)
+[![Python](https://img.shields.io/badge/Python-3.9%2B_Stdlib-30B0C7?style=flat-square)](https://www.python.org/)
+[![Zero Patch](https://img.shields.io/badge/app.asar-免改包·零风险-5856D6?style=flat-square)](#🔒-隐私与安全声明)
 [![License](https://img.shields.io/badge/license-MIT-gray?style=flat-square)](LICENSE)
 
 <br />
@@ -56,37 +56,45 @@
 按以下步骤执行：
 1. 检查本机 Python 3.9+ 环境（零第三方依赖，无需 pip install）。
 2. 若本机有 Git 则克隆仓库到临时目录；若无 Git 则直接下载 https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip 并解压。
-3. 读取仓库内的 AGENTS.md，运行 install.ps1（Windows）或 install.sh（macOS/Linux）将插件部署到 ~/.gemini/config/plugins/quota-monitor，并调用 RefreshMcpServers 热刷新服务。
+3. 读取仓库内的 AGENTS.md，运行 install.ps1（Windows）或 bash install.sh（macOS/Linux），脚本会自动部署插件到 ~/.gemini/config/plugins/quota-monitor 并热刷新 MCP 服务。
 4. 不要关闭或重启客户端；安装验证完成后告诉我如何在右侧栏打开「额度监控」。
 ```
 
 ---
 
-## 🛠️ 手动脚本安装（Windows / macOS / Linux）
+## 🛠️ 手动安装（支持无 Git 环境）
 
 前置要求：本机已安装 **Python 3.9+**（无需安装任何第三方库）。
 
-### Windows
-克隆或下载解压本仓库后，双击运行 **`install.bat`**，或在 PowerShell 中执行：
+### Windows（PowerShell 一行在线安装，无需 Git）
+打开 PowerShell，直接复制粘贴运行：
 
 ```powershell
-git clone https://github.com/leaomiguel894-create/antigravity-quota-monitor.git
-cd antigravity-quota-monitor
-.\install.ps1
+$z="$env:TEMP\agy-qm.zip"; $d="$env:TEMP\agy-qm"; Invoke-WebRequest "https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip" -OutFile $z; if(Test-Path $d){Remove-Item -Recurse -Force $d}; Expand-Archive $z -DestinationPath $d; powershell -NoProfile -ExecutionPolicy Bypass -File "$d\antigravity-quota-monitor-main\install.ps1"
 ```
 
-### macOS / Linux
+> 或者在 [Releases](https://github.com/leaomiguel894-create/antigravity-quota-monitor/releases/latest) 下载 `antigravity-quota-monitor-v2.2.0.zip`，解压后双击运行里面的 **`install.bat`** 即可。
+
+### macOS / Linux（终端一行在线安装，无需 Git）
+打开终端，直接复制粘贴运行：
+
+```bash
+tmp="$(mktemp -d)" && curl -fsSL "https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip" -o "$tmp/qm.zip" && unzip -q "$tmp/qm.zip" -d "$tmp" && bash "$tmp/antigravity-quota-monitor-main/install.sh" && rm -rf "$tmp"
+```
+
+### 使用 Git 克隆安装
 ```bash
 git clone https://github.com/leaomiguel894-create/antigravity-quota-monitor.git
 cd antigravity-quota-monitor
-chmod +x install.sh && ./install.sh
+# Windows (PowerShell): .\install.ps1
+# macOS / Linux:        bash install.sh
 ```
 
 ---
 
 ## 📖 如何固定在右侧侧边栏
 
-安装完成后，支持三种打开方式：
+安装完成后，无需重启客户端，支持三种打开方式：
 
 1. **常驻右侧侧边栏（推荐）**：点击 Antigravity 右上角 **Overview ➔ 插件 ➔ 额度监控**（或右侧辅助面板顶部的 **`+` ➔ 额度监控**），即可作为独立标签页常驻右侧栏。
 2. **左侧导航全屏看板**：点击左侧主导航栏中的 **「额度监控」**。
@@ -101,8 +109,8 @@ antigravity-quota-monitor/
 ├── plugin.json                # Antigravity 插件清单
 ├── mcp_config.json            # MCP 服务端启动配置
 ├── AGENTS.md                  # AI 智能体自动安装指引
-├── install.bat / install.ps1  # Windows 一键安装脚本
-├── install.sh                 # macOS / Linux 一键安装脚本
+├── install.bat / install.ps1  # Windows 一键安装与热加载脚本
+├── install.sh                 # macOS / Linux 一键安装与热加载脚本
 ├── assets/
 │   ├── logo.svg               # 插件矢量图标
 │   └── preview.svg            # 界面预览横幅

@@ -70,7 +70,7 @@
 打开 PowerShell，直接复制粘贴运行：
 
 ```powershell
-$z="$env:TEMP\agy-qm.zip"; $d="$env:TEMP\agy-qm"; Invoke-WebRequest "https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip" -OutFile $z; if(Test-Path $d){Remove-Item -Recurse -Force $d}; Expand-Archive $z -DestinationPath $d; powershell -NoProfile -ExecutionPolicy Bypass -File "$d\antigravity-quota-monitor-main\install.ps1"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $z="$env:TEMP\agy-qm.zip"; $d="$env:TEMP\agy-qm"; Invoke-WebRequest "https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip" -OutFile $z -UseBasicParsing; if(Test-Path $d){Remove-Item -Recurse -Force $d}; Expand-Archive $z -DestinationPath $d; powershell -NoProfile -ExecutionPolicy Bypass -File "$d\antigravity-quota-monitor-main\install.ps1"
 ```
 
 > 或者在 [Releases](https://github.com/leaomiguel894-create/antigravity-quota-monitor/releases/latest) 下载 `antigravity-quota-monitor-v2.2.0.zip`，解压后双击运行里面的 **`install.bat`** 即可。

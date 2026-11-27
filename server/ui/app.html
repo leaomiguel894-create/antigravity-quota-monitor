@@ -1121,11 +1121,6 @@
         .map((a) => `<div class="alert-glass ${a.level === "danger" ? "danger" : "warn"}"><span>${a.level === "danger" ? "🚨" : "⚡"}</span><span>${esc(a.text)}</span></div>`)
         .join("");
 
-      const promptVal = acc.availablePromptCredits != null ? Number(acc.availablePromptCredits).toLocaleString() : "--";
-      const promptMax = acc.monthlyPromptCredits != null ? `月度 ${Number(acc.monthlyPromptCredits).toLocaleString()}` : "Prompt";
-      const flowVal = acc.availableFlowCredits != null ? Number(acc.availableFlowCredits).toLocaleString() : "--";
-      const flowMax = acc.monthlyFlowCredits != null ? `月度 ${Number(acc.monthlyFlowCredits).toLocaleString()}` : "Flow";
-
       let tabBodyHtml = "";
       if (state.activeTab === "quota") {
         tabBodyHtml = `
@@ -1180,19 +1175,6 @@
             </div>
             <div class="pool-list">
               ${pools.map((p) => renderPoolCard(p, focusedPool && p.id === focusedPool.id)).join("")}
-            </div>
-          </div>
-
-          <div class="credits-grid">
-            <div class="glass credit-box">
-              <div class="credit-head"><span>Prompt Credits</span><span class="pill pill-blue">AI</span></div>
-              <div class="credit-val">${esc(promptVal)}</div>
-              <div class="credit-sub">${esc(promptMax)}</div>
-            </div>
-            <div class="glass credit-box">
-              <div class="credit-head"><span>Flow Credits</span><span class="pill pill-blue">Agent</span></div>
-              <div class="credit-val">${esc(flowVal)}</div>
-              <div class="credit-sub">${esc(flowMax)}</div>
             </div>
           </div>
         `;
@@ -1404,7 +1386,7 @@
     async function bootstrap() {
       if (RUNTIME_MODE === "mcp" && typeof __EXT_APPS__ !== "undefined" && __EXT_APPS__) {
         const { App, applyDocumentTheme, applyHostStyleVariables, applyHostFonts } = __EXT_APPS__;
-        mcpApp = new App({ name: "quota-monitor", version: "2.2.0" }, {});
+        mcpApp = new App({ name: "quota-monitor", version: "2.2.1" }, {});
 
         const syncTheme = (ctx) => {
           if (!ctx) return;

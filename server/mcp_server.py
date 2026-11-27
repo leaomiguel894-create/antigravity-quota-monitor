@@ -26,7 +26,7 @@ PROTOCOL_VERSION = "2025-03-26"
 APP_URI = "ui://quota-monitor/app.html"
 SERVER_INFO = {
     "name": "quota-monitor",
-    "version": "2.1.0",
+    "version": "2.2.1",
 }
 
 SPRINT_WINDOW_SECONDS = 5 * 3600

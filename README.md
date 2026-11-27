@@ -6,7 +6,7 @@
 
 **Apple 毛玻璃质感的 Google Antigravity 右侧栏额度、会话上下文与输出速度监控插件**
 
-[![Release](https://img.shields.io/badge/release-v2.2.0-007AFF?style=flat-square)](https://github.com/leaomiguel894-create/antigravity-quota-monitor/releases/latest)
+[![Release](https://img.shields.io/badge/release-v2.2.1-007AFF?style=flat-square)](https://github.com/leaomiguel894-create/antigravity-quota-monitor/releases/latest)
 [![MCP Apps](https://img.shields.io/badge/MCP_Apps-SEP--1865-34C759?style=flat-square)](https://github.com/modelcontextprotocol/ext-apps)
 [![Python](https://img.shields.io/badge/Python-3.9%2B_Stdlib-30B0C7?style=flat-square)](https://www.python.org/)
 [![Zero Patch](https://img.shields.io/badge/app.asar-免改包·零风险-5856D6?style=flat-square)](#🔒-隐私与安全声明)
@@ -73,7 +73,7 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $z="$env:TEMP\agy-qm.zip"; $d="$env:TEMP\agy-qm"; Invoke-WebRequest "https://github.com/leaomiguel894-create/antigravity-quota-monitor/archive/refs/heads/main.zip" -OutFile $z -UseBasicParsing; if(Test-Path $d){Remove-Item -Recurse -Force $d}; Expand-Archive $z -DestinationPath $d; powershell -NoProfile -ExecutionPolicy Bypass -File "$d\antigravity-quota-monitor-main\install.ps1"
 ```
 
-> 或者在 [Releases](https://github.com/leaomiguel894-create/antigravity-quota-monitor/releases/latest) 下载 `antigravity-quota-monitor-v2.2.0.zip`，解压后双击运行里面的 **`install.bat`** 即可。
+> 或者在 [Releases](https://github.com/leaomiguel894-create/antigravity-quota-monitor/releases/latest) 下载 `antigravity-quota-monitor-v2.2.1.zip`，解压后双击运行里面的 **`install.bat`** 即可。
 
 ### macOS / Linux（终端一行在线安装，无需 Git）
 打开终端，直接复制粘贴运行：
